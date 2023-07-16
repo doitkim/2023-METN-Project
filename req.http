@@ -1,0 +1,34 @@
+@server = http://localhost:8080
+
+###
+POST {{server}}/auth/register
+Content-Type: application/json
+
+{
+    "email":"test2@test.com",
+    "username": "test2",
+    "password": "test2"
+}
+
+###
+POST {{server}}/auth/login
+Content-Type: application/json
+
+{
+    "email":"test@test.com",
+    "password":"test"
+}
+
+###
+GET {{server}}/users
+
+###
+DELETE {{server}}/users/64b3dd5f9240098dd2d266d0
+
+###
+PATCH  {{server}}/users/64b3de4a9240098dd2d266f5
+Content-Type: application/json
+
+{
+    "username": "modifyUsernameTest"
+}
